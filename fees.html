@@ -1,0 +1,283 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Triple Zen Chateau</title>
+  <link href="https://preview.tabler.io/dist/css/tabler.min.css?1695847769" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <link href="css/tabler.min.css" rel="stylesheet" />
+</head>
+
+<body class="antialiased">
+  <div class="wrapper">
+    <header class="navbar navbar-expand-md navbar-dark d-print-none" style="background-color: #DDDDDD;">
+      <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+          <a href=".">
+            <img src="">
+          </a>
+        </h1>
+        <div class="navbar-nav flex-row order-md-last">
+          <div class="nav-item dropdown d-none d-md-flex me-3">
+            <a href="https://wallet.autradex.systems/" class="nav-link px-0">
+              < back to trading </a>
+          </div>
+        </div>
+        
+                <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+            <ul class="navbar-nav">
+
+              <li class="nav-item">
+                <a class="nav-link" href="./fees.html">
+                  <span class="nav-link-title">
+                    Fees
+                  </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./currencies.html">
+                  <span class="nav-link-title">
+                    Currencies
+                  </span>
+                </a>
+              </li>
+
+              <!--<li class="nav-item">
+                <a class="nav-link" href="./assets">
+                  <span class="nav-link-title">
+                    Assets
+                  </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./media.html">
+                  <span class="nav-link-title">
+                    Press kit
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./policy.html">
+                    <span class="nav-link-title">
+                        Deposit recovery
+                    </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./policy.html#delisting-policy">
+                    <span class="nav-link-title">
+                        Coin Delisting
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tos.html">
+                <span class="nav-link-title">
+                  Terms of Service
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./privacy.html">
+                <span class="nav-link-title">
+                  Privacy Policy
+                </span>
+              </a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" href="./api.html">
+                  <span class="nav-link-title">
+                    API
+                  </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./announcements.html">
+                  <span class="nav-link-title">
+                    Announcements
+                  </span>
+                </a>
+              </li>-->
+
+              <li class="nav-item">
+                <a class="nav-link" href="https://discord.gg/TfvtPJsQXE">
+                  <span class="nav-link-title">
+                    Add coin
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <div class="page-wrapper">
+      <div class="container-xl">
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+          <div class="row align-items-center">
+            <div class="col">
+              <!-- Page pre-title -->
+              <div class="page-pretitle">
+                Knowledge base
+              </div>
+              <h2 class="page-title">
+                Fees
+              </h2>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="container-xl">
+
+          <div class="row">
+            <div class="col-sm-4 m-auto">
+              <div class="card">
+                <div class="card-body p-2 text-center">
+                  All pairs fee<br />
+                  Maker/ Taker<br />
+                  <div class="h1 m-0 text-green" id="">0.2% / 0.2%</div>
+                  Contact us via Discord for market maker discounts.
+                  <div class="text-muted mb-3"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-3 card">
+            <div class="card-table table-responsive">
+              <table id="withdrawalFees" class="table table-striped table-sm table-hover">
+                <thead>
+                  <tr>
+                    <th>Coin/Token Name</th>
+                    <th>Minimum Deposit</th>
+                    <th>Deposit Fee</th>
+                    <th>Minimum Withdrawal</th>
+                    <th>Withdrawal Fee</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="9" cy="12" r="1"></circle>
+                <circle cx="15" cy="12" r="1"></circle>
+                <path d="M7.5 7.5c3.5 -1 5.5 -1 9 0"></path>
+                <path d="M7 16.5c3.5 1 6.5 1 10 0"></path>
+                <path
+                  d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-1 2.5">
+                </path>
+                <path
+                  d="M8.5 17c0 1 -1.356 3 -1.832 3c-1.429 0 -2.698 -1.667 -3.333 -3c-.635 -1.667 -.476 -5.833 1.428 -11.5c1.388 -1.015 2.782 -1.34 4.237 -1.5l1 2.5">
+                </path>
+              </svg><a class="mr-3 ml-1" href="https://discord.gg/">Discord</a> | <svg
+                xmlns="http://www.w3.org/2000/svg" class="icon ml-3" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+              </svg><a class="mr-3 ml-1" href="https://t.me/">Telegram</a> | <svg
+                xmlns="http://www.w3.org/2000/svg" class="icon ml-3" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z">
+                </path>
+              </svg><a class="mr-3 ml-1" href="https://twitter.com/autradex1">Twitter</a>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  Copyright &copy;
+                  <a href="/" class="link-secondary"></a>.
+                  All rights reserved.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/tabler.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  $('#withdrawalFees').dataTable({
+    autoWidth: false,
+    searching: true,
+    ordering: false,
+    responsive: true,
+    lengthChange: true,
+    processing: true,
+    stateSave: true,
+    paging: false,
+    bInfo: false,
+    ajax: {
+            url: 'https://wallet.autradex.systems/api/v2/peatio/public/currencies',
+            dataSrc: function (json) {
+              for (var i = 0; i < json.length; i++) {
+  
+                json[i]['id'] = json[i]['id'].toUpperCase();
+                json[i]['name'] = '<img style=\"vertical-align:middle\" width=\"24px\" height=\"24px\" src=\"' + json[i]['icon_url'] + '\" alt=\"' + json[i]['name'] + '\"> ' + json[i]['name'] + '';
+                json[i]['min_deposit_amount'] + '';
+                json[i]['deposit_fee'] + '';
+                json[i]['min_withdraw_amount'] + '';
+                json[i]['withdraw_fee'] + '';
+
+                
+              }
+              return json;
+            }
+          },
+        columns: [
+          { data: 'name', width: '20%' },
+          { data: 'min_deposit_amount', width: '20%' },
+          { data: 'deposit_fee', width: '20%' },
+          { data: 'min_withdraw_amount', width: '20%' },
+          { data: 'withdraw_fee', width: '20%' }
+        ]
+      });
+    
+  if (!$('#withdrawalFees_wrapper .dataTables_filter input').length) {
+    $('<div class="col-md-6 text-end"><input type="text" class="form-control form-control-sm" placeholder="Search" id="searchInput"></div>')
+      .insertBefore('#withdrawalFees_wrapper .dataTables_filter');
+  }
+
+  $('#searchInput').keyup(function () {
+    dataTable.search($(this).val()).draw();
+  });
+});
+</script>
+
+</body>
+
+</html>
