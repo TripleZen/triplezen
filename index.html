@@ -262,12 +262,12 @@
                             <div class="desc">
                                 AuTradeX Systems</p>
 				Pool Status
-    <div id="status">Checking...</div>
+    <div id="pool_status">Checking...</div>
 
     <script>
         (function() {
             const url = 'http://triplezen.org/';
-            const statusDiv = document.getElementById('status');
+            const statusDiv = document.getElementById('pool_status');
 
             fetch(url, { method: 'HEAD' })
                 .then(response => {
