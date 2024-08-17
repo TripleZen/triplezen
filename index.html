@@ -260,7 +260,31 @@
                             
                             </div>
                             <div class="desc">
-                                AuTradeX Systems</p>
+                                AuTradeX Systems
+				<p>Website Server Status</p>
+    <div id="status">Checking...</div>
+
+    <script>
+        (function() {
+            const url = 'https://wallet.autradex.systems';
+            const statusDiv = document.getElementById('status');
+
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = 'Status: Online';
+                        statusDiv.style.color = 'green';
+                    } else {
+                        statusDiv.textContent = 'Status: Offline';
+                        statusDiv.style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    statusDiv.textContent = 'Status: Offline';
+                    statusDiv.style.color = 'red';
+                });
+        })();
+    </script>
                                 <p class="h6"><small><br>Online Users: 18<br>
                                 Server Time: <span id="getclock">Australian Eastern Standard Time (AEST)</span></small></p>
                             </div>
