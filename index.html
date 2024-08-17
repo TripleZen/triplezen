@@ -262,7 +262,28 @@
                             <div class="desc">
                                 AuTradeX Systems</p>
 				Pool Status
-    <div id="status1" class="status">Checking ...</div>
+    <div id="status" class="status">Checking ...</div>
+    <script>
+        (function() {
+            const url = 'https://wallet.autradex.systems';  // Replace with your website URL
+            const statusDiv = document.getElementById('status');
+
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = 'Status: Online';
+                        statusDiv.style.color = 'green';
+                    } else {
+                        statusDiv.textContent = 'Status: Offline';
+                        statusDiv.style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    statusDiv.textContent = 'Status: Offline';
+                    statusDiv.style.color = 'red';
+                });
+        })();
+    </script>
 				Wallet Status
     <div id="status2" class="status">Checking ...</div>
 
