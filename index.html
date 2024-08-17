@@ -262,52 +262,33 @@
                             <div class="desc">
                                 AuTradeX Systems</p>
 				Pool Status
-    <div id="pool_status">Checking...</div>
+    <div id="status1" class="status">Checking ...</div>
+				Wallet Status
+    <div id="status2" class="status">Checking ...</div>
 
     <script>
-        (function() {
-            const url = 'http://triplezen.org/';
-            const statusDiv = document.getElementById('pool_status');
+        function checkStatus(url, elementId) {
+            const statusDiv = document.getElementById(elementId);
 
             fetch(url, { method: 'HEAD' })
                 .then(response => {
                     if (response.ok) {
-                        statusDiv.textContent = 'Status: Online';
+                        statusDiv.textContent = `${url} Status: Online`;
                         statusDiv.style.color = 'green';
                     } else {
-                        statusDiv.textContent = 'Status: Offline';
+                        statusDiv.textContent = `${url} Status: Offline`;
                         statusDiv.style.color = 'red';
                     }
                 })
                 .catch(error => {
-                    statusDiv.textContent = 'Status: Offline';
+                    statusDiv.textContent = `${url} Status: Offline`;
                     statusDiv.style.color = 'red';
                 });
-        })();
-    </script>
-				    Web Wallet Status
-    <div id="status">Checking...</div>
+        }
 
-    <script>
-        (function() {
-            const url = 'https://wallet.autradex.systems';
-            const statusDiv = document.getElementById('status');
-
-            fetch(url, { method: 'HEAD' })
-                .then(response => {
-                    if (response.ok) {
-                        statusDiv.textContent = 'Status: Online';
-                        statusDiv.style.color = 'green';
-                    } else {
-                        statusDiv.textContent = 'Status: Offline';
-                        statusDiv.style.color = 'red';
-                    }
-                })
-                .catch(error => {
-                    statusDiv.textContent = 'Status: Offline';
-                    statusDiv.style.color = 'red';
-                });
-        })();
+        // Check the status of two sites
+        checkStatus('http://triplezen.org', 'status1');  // Replace with your first URL
+        checkStatus('https://wallet.autradex.systems', 'status2');  // Replace with your second URL
     </script>
                                 <p class="h6"><small><br>Online Users: 18<br>
                                 Server Time: <span id="getclock">Australian Eastern Standard Time (AEST)</span></small></p>
