@@ -261,7 +261,31 @@
                             </div>
                             <div class="desc">
                                 AuTradeX Systems</p>
-				Server Status
+				Pool Status
+    <div id="status">Checking...</div>
+
+    <script>
+        (function() {
+            const url = 'http://triplezen.org/';
+            const statusDiv = document.getElementById('status');
+
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = 'Status: Online';
+                        statusDiv.style.color = 'green';
+                    } else {
+                        statusDiv.textContent = 'Status: Offline';
+                        statusDiv.style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    statusDiv.textContent = 'Status: Offline';
+                    statusDiv.style.color = 'red';
+                });
+        })();
+    </script>
+				    Web Wallet Status
     <div id="status">Checking...</div>
 
     <script>
