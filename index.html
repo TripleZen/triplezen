@@ -282,7 +282,7 @@
             const url = 'https://wallet.autradex.systems';  // Replace with your website URL
             const statusDiv = document.getElementById('status');
 
-            fetch(url, { method: 'HEAD' })
+            fetch(url, { method: 'GET' })
                 .then(response => {
                     if (response.ok) {
                         statusDiv.textContent = 'Status: Online';
