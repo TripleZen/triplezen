@@ -276,7 +276,9 @@
                             <div class="desc">
                                 AuTradeX Systems</p>
 				Wallet Status
-    <div id="status2" class="status">Checking ...</div>
+    <div id="status3" class="status">Checking ...</div>
+				Exchange Status
+    <div id="status3" class="status">Checking ...</div>
     <script>
         (function() {
             const url = 'https://wallet.autradex.systems';  // Replace with your website URL
@@ -308,20 +310,21 @@
         fetch(url, { method: 'GET', mode: 'no-cors' })
             .then(response => {
                 if (response.ok || response.type === 'opaque') {  // Opaque responses are typical for no-cors mode
-                    statusDiv.textContent = `${url} Status: Online`;
-                    statusDiv.style.color = 'green';
-                } else {
                     statusDiv.textContent = `Status: Online`;
                     statusDiv.style.color = 'green';
+                } else {
+                    statusDiv.textContent = `Status: Offline`;
+                    statusDiv.style.color = 'red';
                 }
             })
             .catch(error => {
-                statusDiv.textContent = `Status: Online`;
+                statusDiv.textContent = `Status: Online-`;
                 statusDiv.style.color = 'green'; // Temp solution to failed get
             });
     }
         checkStatus('https://triplezen.org', 'status1');
-        checkStatus('https://wallet.autradex.systems', 'status2');
+        checkStatus('https://wallet.autradex.systems/trading', 'status2');
+	checkStatus('https://wallet.autradex.systems/wallets', 'status3');
     </script>
                                 <p class="h6"><small><br>Online Users: 18<br>
                                 Server Time: <span id="getclock">Australian Eastern Standard Time (AEST)</span></small></p><br>
